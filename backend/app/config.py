@@ -13,7 +13,7 @@ class Settings(BaseSettings):
     # Application
     app_env: str = "development"
     secret_key: str = "dev-secret-key-change-in-production"
-    allowed_origins: str = "http://localhost:3000"
+    allowed_origins: str = "http://localhost:3000,http://localhost:3001"
 
     # File uploads
     max_upload_size_mb: int = 5

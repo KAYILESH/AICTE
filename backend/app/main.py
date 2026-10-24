@@ -7,7 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 from app.config import get_settings
-from app.api import complaints, institutions, notifications, profile
+from app.api import complaints, institutions, notifications, profile, official
 
 settings = get_settings()
 
@@ -40,6 +40,7 @@ app.include_router(complaints.router, prefix=API_PREFIX)
 app.include_router(institutions.router, prefix=API_PREFIX)
 app.include_router(notifications.router, prefix=API_PREFIX)
 app.include_router(profile.router, prefix=API_PREFIX)
+app.include_router(official.router, prefix=API_PREFIX)
 
 
 # ── Health check ──────────────────────────────────────────────────────────────
